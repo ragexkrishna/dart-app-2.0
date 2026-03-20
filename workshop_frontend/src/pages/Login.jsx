@@ -47,7 +47,7 @@ export default function Login() {
         ? { email, password, role: "admin" } 
         : { email, rollNumber, role: "student" };
 
-      const res = await api.post("/api/auth/login", payload);
+      const res = await api.post("/auth/login", payload);
 
       localStorage.setItem("name", res.data.name);
       localStorage.setItem("email", res.data.email);
